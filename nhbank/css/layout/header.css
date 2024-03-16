@@ -1,0 +1,94 @@
+@layer layout.header {
+  .login-setting {
+    border: 0.1rem solid var(--graydd);
+    display: inline-flex;
+    & a {
+      padding: 0 1.5rem;
+      line-height: 2.8rem;
+      font-size: 1.5rem;
+      color: var(--gray5e);
+      background-color: var(--grayf8);
+      position: relative;
+      + a {
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          height: 1rem; border-right: .1rem solid var(--grayb8);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  } /* login-setting end */
+
+  .utility {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+
+  .utility__list {
+    display: flex;
+    align-items: center;
+    & a {
+      padding: 0 1rem;
+      font-size: 1.5rem;
+      color: var(--gray26);
+    }
+    & li {
+      + li {
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          height: 1rem;
+          border-right: .1rem solid var(--grayb8);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  .global-nav {
+    padding: 0 0 0 1rem;
+    width: 9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: var(--gray26);
+    &::after {
+      content: "\F282";
+      font-family: var(--icon);
+      font-size: 1rem;
+    }
+  }
+
+  .header__side-nav {
+    & ul {
+      display: flex;
+      gap: 2.5rem;
+    }
+    & a {
+      font-size: 1.8rem;
+      color: var(--gray26);
+      font-weight: 500;
+    }
+  }
+  .gnb {
+    border-top: .1rem solid var(--grayf8);
+    border-bottom: .1rem solid var(--grayf8);
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    & a {
+      display: block;
+      line-height: 5rem;
+      font-size: 2rem;
+    }
+  }
+} /* header end*/

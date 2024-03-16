@@ -1,0 +1,20 @@
+@layer layout.align {
+  .m0auto {
+    margin: 0 auto;
+    width: 98rem;
+  }
+
+  .header__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.2rem 0;
+    padding: 2.2rem 0 1.4rem;
+    align-items: center;
+    > *:nth-child(odd) {
+      justify-self: start;
+    }
+    > *:nth-child(even) {
+      justify-self: end;
+    }
+  }
+}
